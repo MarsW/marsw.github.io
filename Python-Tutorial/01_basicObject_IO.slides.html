@@ -12287,8 +12287,8 @@ HelloHelloHelloHello
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4477814896 4477814896
-4477814928 4477814896
+<pre>4512700528 4512700528
+4512700560 4512700528
 </pre>
 </div>
 </div>
@@ -12454,10 +12454,10 @@ HelloHelloHelloHello
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-7-151fbba3d316&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-7-fd442dc9fc85&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> my_string <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;123&#34;</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> my_int_number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">456</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>print <span class="ansi-blue-fg">(</span>my_string<span class="ansi-blue-fg">+</span>my_int_number<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>my_string<span class="ansi-blue-fg">+</span>my_int_number<span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">TypeError</span>: must be str, not int</pre>
 </div>
@@ -12527,10 +12527,10 @@ HelloHelloHelloHello
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-8-347d8eaf9d2b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> print <span class="ansi-blue-fg">(</span>input1<span class="ansi-blue-fg">+</span>int<span class="ansi-blue-fg">(</span>input2<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> print <span class="ansi-blue-fg">(</span>float<span class="ansi-blue-fg">(</span>input3<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">+</span>input1<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>print <span class="ansi-blue-fg">(</span>int<span class="ansi-blue-fg">(</span>input3<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">&lt;ipython-input-8-496e0602659a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span>input1<span class="ansi-blue-fg">+</span>int<span class="ansi-blue-fg">(</span>input2<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> print<span class="ansi-blue-fg">(</span>float<span class="ansi-blue-fg">(</span>input3<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">+</span>input1<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>int<span class="ansi-blue-fg">(</span>input3<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">ValueError</span>: invalid literal for int() with base 10: &#39;5566.123&#39;</pre>
 </div>
@@ -12612,9 +12612,9 @@ HelloHelloHelloHello
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">)</span>    <span class="c1"># &quot;a=&quot; 是提示字，讓我們知道電腦在等我們輸入</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;b=&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a+b=&quot;</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="c1"># input進來是字串</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入a~&quot;</span><span class="p">)</span>  <span class="c1"># &quot;請輸入a~&quot; 是提示字，讓我們知道電腦在等我們輸入</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入b~&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>            <span class="c1"># input進來是字串</span>
 </pre></div>
 
 </div>
@@ -12631,9 +12631,9 @@ HelloHelloHelloHello
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>a=5
-b=2
-a+b= 52
+<pre>請輸入a~2
+請輸入b~5
+25
 </pre>
 </div>
 </div>
@@ -12647,9 +12647,9 @@ a+b= 52
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">)</span>    <span class="c1"># &quot;a=&quot; 是提示字，讓我們知道電腦在等我們輸入</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;b=&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a+b=&quot;</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="c1"># input進來是字串</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入a~&quot;</span><span class="p">)</span>  <span class="c1"># &quot;請輸入a~&quot; 是提示字，讓我們知道電腦在等我們輸入</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入b~&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>            <span class="c1"># input進來是字串</span>
 </pre></div>
 
 </div>
@@ -12666,9 +12666,9 @@ a+b= 52
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>a=Hello
-b=PyLadies
-a+b= HelloPyLadies
+<pre>請輸入a~Hello
+請輸入b~PyLadies
+HelloPyLadies
 </pre>
 </div>
 </div>
@@ -12683,9 +12683,9 @@ a+b= HelloPyLadies
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="[&#32244;&#32722;]">[&#32244;&#32722;]<a class="anchor-link" href="#[&#32244;&#32722;]">&#182;</a></h3><p>請修正以下程式碼，讓他是計算機的功能<br>
 eg. 我分別輸入 5 (按下Enter) 10 (按下Enter) 結果會是 15</p>
-<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;b=&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;a+b=&quot;</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入a~&quot;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入b~&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12696,9 +12696,9 @@ eg. 我分別輸入 5 (按下Enter) 10 (按下Enter) 結果會是 15</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;b=&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;a+b=&quot;</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入a~&quot;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入b~&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12728,9 +12728,9 @@ eg. 我分別輸入 5 (按下Enter) 10 (按下Enter) 結果會是 15</p>
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;a=&quot;</span><span class="p">)</span> <span class="c1"># &quot;a=&quot; 是提示字，讓我們知道電腦在等我們輸入</span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>      <span class="c1"># input進來是字串，要做數值運算要用int()轉換   </span>
-<span class="c1"># 以上也可以簡寫為 a = int(input(&quot;a=&quot;))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入a~&quot;</span><span class="p">)</span> <span class="c1"># &quot;請輸入a~&quot; 是提示字，讓我們知道電腦在等我們輸入</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>          <span class="c1"># input進來是字串，要做數值運算要用int()轉換   </span>
+<span class="c1"># 以上也可以簡寫為 a = int(input(&quot;請輸入a~&quot;))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a*2=&quot;</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a^2=&quot;</span><span class="p">,</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -12749,9 +12749,9 @@ eg. 我分別輸入 5 (按下Enter) 10 (按下Enter) 結果會是 15</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>a=5
-a*2= 10
-a^2= 25
+<pre>請輸入a~3
+a*2= 6
+a^2= 9
 </pre>
 </div>
 </div>
@@ -13458,7 +13458,7 @@ True True True True
 </div>
 </div>
 
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
