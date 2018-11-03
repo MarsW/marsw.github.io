@@ -12422,8 +12422,6 @@ p
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="[&#32244;&#32722;]-&#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;">[&#32244;&#32722;] &#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;<a class="anchor-link" href="#[&#32244;&#32722;]-&#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;">&#182;</a></h3><p>改了儲存方式，請計算若水果都賣出後，可賺進多少錢？</p>
-<h4 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h4><p>先把資料直接丟入迴圈，看會印出什麼元素～<br>
-確定拿到的元素是對的，再進行處理！</p>
 <div class="highlight"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;banana&quot;</span><span class="p">:{</span>
         <span class="s2">&quot;stock&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
@@ -12431,7 +12429,7 @@ p
     <span class="p">},</span>
     <span class="s2">&quot;apple&quot;</span><span class="p">:{</span>
         <span class="s2">&quot;stock&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
-        <span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="mi">15</span>
+        <span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="mi">20</span>
     <span class="p">},</span>
     <span class="s2">&quot;orange&quot;</span><span class="p">:{</span>
         <span class="s2">&quot;stock&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
@@ -12442,7 +12440,47 @@ p
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h4><p>先把資料直接丟入迴圈，看會印出什麼元素～<br>
+確定拿到的元素是對的，再進行處理！<br>
+(試試印出香蕉的庫存)</p>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;banana&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;stock&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="mi">5</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;apple&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;stock&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="mi">20</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;orange&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;stock&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;price&quot;</span><span class="p">:</span><span class="mi">15</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">revenue</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">product</span><span class="p">:</span>
+    <span class="n">revenue</span><span class="o">+=</span><span class="n">product</span><span class="p">[</span><span class="n">fruit</span><span class="p">][</span><span class="s2">&quot;stock&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">product</span><span class="p">[</span><span class="n">fruit</span><span class="p">][</span><span class="s2">&quot;price&quot;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
