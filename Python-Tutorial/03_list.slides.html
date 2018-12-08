@@ -12261,9 +12261,9 @@ The last element of my_string =  n
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>True True
-4510152816 4510152816 4510152816
+4383230064 4383230064 4383230064
 False False
-4510152880 4510152848 4510152816
+4383230128 4383230096 4383230064
 </pre>
 </div>
 </div>
@@ -12305,7 +12305,7 @@ False False
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True 4559301576 4559301576
+<pre>True 4432372232 4432372232
 </pre>
 </div>
 </div>
@@ -12339,7 +12339,7 @@ False False
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True 4559301576 4559301576
+<pre>True 4432372232 4432372232
 [&#39;a&#39;, 2016, 5566, &#39;PyLadies&#39;, &#39;Hi&#39;]
 [&#39;a&#39;, 2016, 5566, &#39;PyLadies&#39;, &#39;Hi&#39;]
 </pre>
@@ -12375,7 +12375,7 @@ False False
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True 4559301576 4559301576
+<pre>True 4432372232 4432372232
 [&#39;a&#39;, 2016, 2017, &#39;PyLadies&#39;, &#39;Hi&#39;]
 [&#39;a&#39;, 2016, 2017, &#39;PyLadies&#39;, &#39;Hi&#39;]
 </pre>
@@ -13015,13 +13015,61 @@ Taiwan
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#25033;&#29992;&#24773;&#22659;---&#26085;&#26399;&#27491;&#35215;&#21270;-(&#24180;-&#26376;-&#26085;-&#26178;:&#20998;:&#31186;)">&#25033;&#29992;&#24773;&#22659; - &#26085;&#26399;&#27491;&#35215;&#21270; (&#24180;-&#26376;-&#26085; &#26178;:&#20998;:&#31186;)<a class="anchor-link" href="#&#25033;&#29992;&#24773;&#22659;---&#26085;&#26399;&#27491;&#35215;&#21270;-(&#24180;-&#26376;-&#26085;-&#26178;:&#20998;:&#31186;)">&#182;</a></h3>
+<p>同樣道理，<br>
+如果是用要用<code>in</code>判斷，找「單字」是否存在字串中，<br>
+記得先分割成單字的字串才使用</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;PyLadies Taiwan&quot;</span>
+<span class="k">if</span> <span class="s2">&quot;Py&quot;</span> <span class="ow">in</span> <span class="n">my_string</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">Py</span><span class="se">\&quot;</span><span class="s2"> found in my_string&quot;</span><span class="p">)</span>
+
+<span class="n">my_string_list</span> <span class="o">=</span> <span class="n">my_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s2">&quot;Py&quot;</span> <span class="ow">in</span> <span class="n">my_string_list</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">Py</span><span class="se">\&quot;</span><span class="s2"> found in my_string_list&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#34;Py&#34; found in my_string
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#25033;&#29992;&#24773;&#22659;---&#26085;&#26399;&#27491;&#35215;&#21270;-(&#24180;-&#26376;-&#26085;-&#26178;:&#20998;:&#31186;)">&#25033;&#29992;&#24773;&#22659; - &#26085;&#26399;&#27491;&#35215;&#21270; (&#24180;-&#26376;-&#26085; &#26178;:&#20998;:&#31186;)<a class="anchor-link" href="#&#25033;&#29992;&#24773;&#22659;---&#26085;&#26399;&#27491;&#35215;&#21270;-(&#24180;-&#26376;-&#26085;-&#26178;:&#20998;:&#31186;)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ebc_datetime</span> <span class="o">=</span> <span class="s2">&quot;2016-10-17 17:00&quot;</span>
@@ -13061,54 +13109,6 @@ Taiwan
 <pre>2016-10-17 17:00:00
 2016-10-11 19:55:00
 2016-10-18 23:22:05
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>同樣道理，<br>
-如果是用要用<code>in</code>判斷，找「單字」是否存在字串中，<br>
-記得先分割成單字的字串才使用</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;PyLadies Taiwan&quot;</span>
-<span class="k">if</span> <span class="s2">&quot;Py&quot;</span> <span class="ow">in</span> <span class="n">my_string</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">Py</span><span class="se">\&quot;</span><span class="s2"> found in my_string&quot;</span><span class="p">)</span>
-
-<span class="n">my_string_list</span> <span class="o">=</span> <span class="n">my_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="s2">&quot;Py&quot;</span> <span class="ow">in</span> <span class="n">my_string_list</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">Py</span><span class="se">\&quot;</span><span class="s2"> found in my_string_list&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&#34;Py&#34; found in my_string
 </pre>
 </div>
 </div>
