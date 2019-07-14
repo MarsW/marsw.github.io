@@ -12217,6 +12217,181 @@ range(0,5,-1) []
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range()&#26356;&#24392;&#24615;&#30340;&#23531;&#27861;"><code>range()</code>&#26356;&#24392;&#24615;&#30340;&#23531;&#27861;<a class="anchor-link" href="#range()&#26356;&#24392;&#24615;&#30340;&#23531;&#27861;">&#182;</a></h3><p><code>range(數值)</code>中，數值最好保持彈性，<br>
+如果寫死，一但串列增加元素，就得記得改值，很是不方便！</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;員工</span><span class="si">{}</span><span class="s2">的薪水&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="mi">22000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>員工1的薪水 22550.0
+員工2的薪水 22900
+員工3的薪水 23000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;員工</span><span class="si">{}</span><span class="s2">的薪水&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="mi">22000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>員工1的薪水 22550.0
+員工2的薪水 22900
+員工3的薪水 23000
+員工4的薪水 22230.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span> <span class="c1"># 串列有多長就用多長</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;員工</span><span class="si">{}</span><span class="s2">的薪水&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="mi">22000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>員工1的薪水 22550.0
+員工2的薪水 22900
+員工3的薪水 23000
+員工4的薪水 22230.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="[&#32244;&#32722;]-&#35519;&#20998;&#20844;&#24335;&#65306;&#38283;&#26681;&#34399;(0.5&#27425;&#26041;)&#65292;&#20877;&#20056;10">[&#32244;&#32722;] &#35519;&#20998;&#20844;&#24335;&#65306;&#38283;&#26681;&#34399;(0.5&#27425;&#26041;)&#65292;&#20877;&#20056;10<a class="anchor-link" href="#[&#32244;&#32722;]-&#35519;&#20998;&#20844;&#24335;&#65306;&#38283;&#26681;&#34399;(0.5&#27425;&#26041;)&#65292;&#20877;&#20056;10">&#182;</a></h3><p>有一列學生的成績<code>l = [32,56,58,62,79,82,98]</code>，<br>
+我希望將學生調分：</p>
+<blockquote><p>學生1 56.568542494923804<br>
+學生2 74.83314773547883<br>
+學生3 76.15773105863909<br>
+學生4 78.74007874011811<br>
+學生5 88.88194417315589<br>
+學生6 90.55385138137417<br>
+學生7 98.99494936611666</p>
+</blockquote>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>使用range()<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mi">98</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">__</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;學生{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">__</span><span class="p">),</span><span class="n">___</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>使用range()<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mi">98</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>
+  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;學生{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#30452;&#25509;&#23565;&#20018;&#21015;&#20570;&#36845;&#20195;">&#30452;&#25509;&#23565;&#20018;&#21015;&#20570;&#36845;&#20195;<a class="anchor-link" href="#&#30452;&#25509;&#23565;&#20018;&#21015;&#20570;&#36845;&#20195;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>串列也是一個可迭代者，<br>
 如果要取所有串列的元素，除了用索引拿取 <code>range(0,len(串列))</code>，<br>
 也可以直接用for迴圈處理：</p>
@@ -12417,123 +12592,6 @@ range(0,5,-1) []
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="range()&#26356;&#24392;&#24615;&#30340;&#23531;&#27861;"><code>range()</code>&#26356;&#24392;&#24615;&#30340;&#23531;&#27861;<a class="anchor-link" href="#range()&#26356;&#24392;&#24615;&#30340;&#23531;&#27861;">&#182;</a></h3><p><code>range(數值)</code>中，數值最好保持彈性，<br>
-如果寫死，一但串列增加元素，就得記得改值，很是不方便！</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;員工</span><span class="si">{}</span><span class="s2">的薪水&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="mi">22000</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>員工1的薪水 22550.0
-員工2的薪水 22900
-員工3的薪水 23000
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;員工</span><span class="si">{}</span><span class="s2">的薪水&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="mi">22000</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>員工1的薪水 22550.0
-員工2的薪水 22900
-員工3的薪水 23000
-員工4的薪水 22230.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span> <span class="c1"># 串列有多長就用多長</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;員工</span><span class="si">{}</span><span class="s2">的薪水&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="mi">22000</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>員工1的薪水 22550.0
-員工2的薪水 22900
-員工3的薪水 23000
-員工4的薪水 22230.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="[&#32244;&#32722;]-&#35519;&#20998;&#20844;&#24335;&#65306;&#38283;&#26681;&#34399;(0.5&#27425;&#26041;)&#65292;&#20877;&#20056;10">[&#32244;&#32722;] &#35519;&#20998;&#20844;&#24335;&#65306;&#38283;&#26681;&#34399;(0.5&#27425;&#26041;)&#65292;&#20877;&#20056;10<a class="anchor-link" href="#[&#32244;&#32722;]-&#35519;&#20998;&#20844;&#24335;&#65306;&#38283;&#26681;&#34399;(0.5&#27425;&#26041;)&#65292;&#20877;&#20056;10">&#182;</a></h3><p>有一列學生的成績<code>l = [32,56,58,62,79,82,98]</code>，<br>
 我希望將學生調分：</p>
 <blockquote><p>學生1 56.568542494923804<br>
@@ -12547,17 +12605,12 @@ range(0,5,-1) []
 
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>使用range()<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mi">98</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">__</span><span class="p">):</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;學生{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">__</span><span class="p">),</span><span class="n">___</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</li>
 <li>使用串列，配合紀錄現在索引位置的物件<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mi">98</span><span class="p">]</span>
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
@@ -12576,11 +12629,6 @@ range(0,5,-1) []
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>使用range()<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mi">98</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;學生{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</li>
 <li>使用串列，配合紀錄現在索引位置的物件<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mi">98</span><span class="p">]</span>
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
@@ -12593,12 +12641,20 @@ range(0,5,-1) []
 </div>
 </div>
 </div>
-</aside></section><section>
+</aside></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="[&#32244;&#32722;]">[&#32244;&#32722;]<a class="anchor-link" href="#[&#32244;&#32722;]">&#182;</a></h3><p>延續上題，<br>
+<h1 id="&#26356;&#22810;&#32244;&#32722;">&#26356;&#22810;&#32244;&#32722;<a class="anchor-link" href="#&#26356;&#22810;&#32244;&#32722;">&#182;</a></h1>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="[&#36914;&#38542;&#32244;&#32722;]">[&#36914;&#38542;&#32244;&#32722;]<a class="anchor-link" href="#[&#36914;&#38542;&#32244;&#32722;]">&#182;</a></h3><p>延續上題，<br>
 我想計算調分之後，班上的總平均：<br>
 調分後的加總/學生人數，但要保留原始的成績。</p>
 
@@ -12681,7 +12737,7 @@ range(0,5,-1) []
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="[&#32244;&#32722;]">[&#32244;&#32722;]<a class="anchor-link" href="#[&#32244;&#32722;]">&#182;</a></h3><p>回文是個正念反念都一樣的詞句，試試看要怎麼判斷字串是否為回文，<br>
+<h3 id="[&#36914;&#38542;&#32244;&#32722;]">[&#36914;&#38542;&#32244;&#32722;]<a class="anchor-link" href="#[&#36914;&#38542;&#32244;&#32722;]">&#182;</a></h3><p>回文是個正念反念都一樣的詞句，試試看要怎麼判斷字串是否為回文，<br>
 以下這些都是回文：</p>
 <ul>
 <li>race car</li>
