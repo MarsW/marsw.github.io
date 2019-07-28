@@ -12998,7 +12998,7 @@ represents 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h4><ul>
 <li>建立一個待刪除清單(串列)，預設為空</li>
-<li>迴圈把 資料夾檔案清單中<code>files</code> 裡面的「每一個檔案 <code>file</code>」挑出來</li>
+<li>迴圈把 資料夾檔案清單中<code>files</code> 裡面的「每一個檔案 <code>filename</code>」挑出來</li>
 <li><a href="http://tw.pyladies.com/~marsw/book_basic/basic_01.slides.html#/6">判斷</a>檔案名稱中是否有「大阪」的關鍵字(<strong>是檔案名稱，不是整個清單</strong>)<ul>
 <li>子字串是否出現在父字串中：<a href="https://marsw.github.io/Python-Tutorial/03_list.slides.html#/3/4">序列共同介面 <code>in</code></a></li>
 </ul>
@@ -13018,9 +13018,9 @@ represents 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;大阪城.jpg&quot;</span><span class="p">,</span><span class="s2">&quot;大阪市夜景.jpg&quot;</span><span class="p">,</span><span class="s2">&quot;京都塔水舞.mp4&quot;</span><span class="p">,</span><span class="s2">&quot;京都清水寺01.jpg&quot;</span><span class="p">]</span>
 <span class="n">del_list</span> <span class="o">=</span> <span class="n">__</span> <span class="c1"># 建立一個待刪除清單(串列)，預設為空</span>
-<span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">____</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">____</span><span class="p">:</span>
     <span class="k">if</span> <span class="s2">&quot;大阪&quot;</span> <span class="ow">in</span> <span class="n">___</span><span class="p">:</span>
-        <span class="n">del_list</span><span class="o">.</span><span class="n">_____</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+        <span class="n">del_list</span><span class="o">.</span><span class="n">_____</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span>
 </pre></div>
 
@@ -13034,9 +13034,9 @@ represents 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;大阪城.jpg&quot;</span><span class="p">,</span><span class="s2">&quot;大阪市夜景.jpg&quot;</span><span class="p">,</span><span class="s2">&quot;京都塔水舞.mp4&quot;</span><span class="p">,</span><span class="s2">&quot;京都清水寺01.jpg&quot;</span><span class="p">]</span>
 <span class="n">del_list</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 建立一個待刪除清單(串列)，預設為空</span>
-<span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s2">&quot;大阪&quot;</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
-        <span class="n">del_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;大阪&quot;</span> <span class="ow">in</span> <span class="n">filename</span><span class="p">:</span>
+        <span class="n">del_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">del_list</span><span class="p">)</span>
 </pre></div>
 
