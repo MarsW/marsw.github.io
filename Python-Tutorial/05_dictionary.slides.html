@@ -11661,8 +11661,13 @@ ul.typeahead-list > li > a {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -11930,8 +11935,10 @@ a.anchor-link {
 <ul>
 <li>字典用大括號{}宣告，每個 key 及其對應的 value 為一組元素<br>
 <code>{key1:value1, key2:value2}</code></li>
-<li><code>d[key]</code>：字典以鍵值 key 去存取資料 value，很像是串列的索引 index</li>
-<li>key 需為不可變物件 (eg. <code>int</code>、<code>float</code>、<code>str</code>)</li>
+<li>key 需為不可變物件 (eg. <code>int</code>、<code>float</code>、<code>str</code>)，且需唯一</li>
+<li><code>d[key]</code>：字典以鍵值 key 去取資料 value，很像是串列的索引 index</li>
+<li><code>d[key] = 物件</code> ：字典以鍵值 key 去指向資料，<br>
+如果 key 不存在會自動建立，否則會指向新值。</li>
 </ul>
 
 </div>
@@ -11976,6 +11983,9 @@ a.anchor-link {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Mars&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;姿君&quot;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;毛毛&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;Mars&quot;</span><span class="p">])</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;毛毛&quot;</span><span class="p">]</span> <span class="o">=</span><span class="mi">15</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">&quot;noname&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11993,6 +12003,7 @@ a.anchor-link {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>20
+{&#39;Mars&#39;: 20, &#39;姿君&#39;: 25, &#39;毛毛&#39;: 15, &#39;noname&#39;: 30}
 </pre>
 </div>
 </div>
@@ -12129,7 +12140,6 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#27880;&#24847;!">&#27880;&#24847;!<a class="anchor-link" href="#&#27880;&#24847;!">&#182;</a></h3><ul>
 <li>字典是可變物件</li>
-<li>字典是「非有序」的資料型別</li>
 <li>取用不存在的 key，會出錯</li>
 </ul>
 
@@ -12250,7 +12260,7 @@ a.anchor-link {
 <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="s2">&quot;____&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="s2">&quot;____&quot;</span><span class="p">]</span>
 <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="s2">&quot;____&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="s2">&quot;____&quot;</span><span class="p">]</span>
 <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="s2">&quot;____&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="s2">&quot;____&quot;</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12265,7 +12275,7 @@ a.anchor-link {
 <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">]</span>
 <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">]</span>
 <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="s2">&quot;orange&quot;</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12568,7 +12578,7 @@ p
 <h4 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">revenue</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">stock</span><span class="p">:</span>
     <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="n">____</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="n">____</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12581,9 +12591,9 @@ p
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">revenue</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">stock</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">,</span><span class="n">stock</span><span class="p">[</span><span class="n">fruit</span><span class="p">],</span><span class="n">price</span><span class="p">[</span><span class="n">fruit</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">,</span><span class="n">stock</span><span class="p">[</span><span class="n">fruit</span><span class="p">],</span><span class="n">price</span><span class="p">[</span><span class="n">fruit</span><span class="p">])</span>
     <span class="n">revenue</span> <span class="o">+=</span> <span class="n">stock</span><span class="p">[</span><span class="n">fruit</span><span class="p">]</span> <span class="o">*</span> <span class="n">price</span><span class="p">[</span><span class="n">fruit</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12594,7 +12604,7 @@ p
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="[&#32244;&#32722;]-&#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;">[&#32244;&#32722;] &#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;<a class="anchor-link" href="#[&#32244;&#32722;]-&#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;">&#182;</a></h3><p>改了儲存方式，請計算若水果都賣出後，可賺進多少錢？</p>
+<h3 id="[&#36914;&#38542;&#32244;&#32722;]-&#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;">[&#36914;&#38542;&#32244;&#32722;] &#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;<a class="anchor-link" href="#[&#36914;&#38542;&#32244;&#32722;]-&#35336;&#31639;&#24235;&#23384;-&#20197;&#36852;&#22280;&#34389;&#29702;&#12289;&#21478;&#19968;&#31278;&#20786;&#23384;&#26041;&#24335;">&#182;</a></h3><p>改了儲存方式，請計算若水果都賣出後，可賺進多少錢？</p>
 <div class="highlight"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;banana&quot;</span><span class="p">:{</span>
         <span class="s2">&quot;stock&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
@@ -12647,7 +12657,7 @@ p
 <span class="n">revenue</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">product</span><span class="p">:</span>
     <span class="n">revenue</span><span class="o">+=</span><span class="n">product</span><span class="p">[</span><span class="n">fruit</span><span class="p">][</span><span class="s2">&quot;stock&quot;</span><span class="p">]</span><span class="o">*</span><span class="n">product</span><span class="p">[</span><span class="n">fruit</span><span class="p">][</span><span class="s2">&quot;price&quot;</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">revenue</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12784,16 +12794,16 @@ Mars 20
 <div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Mars&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;姿君&quot;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;毛毛&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
 <span class="n">d</span><span class="p">[</span><span class="s2">&quot;Mars&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">15</span> <span class="c1"># !</span>
 <span class="n">d</span><span class="p">[</span><span class="s2">&quot;姿君&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">5</span>   <span class="c1"># !</span>
-<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 <p>把儲值改成串列內容，試著用迴圈取串列中的值，做到一樣的事情：<br>
 Mars 儲值 15 =&gt; 35<br>
 姿君  儲值  5 =&gt; 30</p>
 <div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Mars&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;姿君&quot;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span><span class="s2">&quot;毛毛&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;Mars&quot;</span><span class="p">,</span><span class="mi">15</span><span class="p">],[</span><span class="s2">&quot;姿君&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
-<span class="n">________________</span>
-<span class="n">________________</span>
-<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">money</span> <span class="ow">in</span> <span class="n">____</span><span class="p">:</span>
+    <span class="n">_</span><span class="p">[</span><span class="n">___</span><span class="p">]</span><span class="o">+=</span><span class="n">____</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12808,7 +12818,7 @@ Mars 儲值 15 =&gt; 35<br>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;Mars&quot;</span><span class="p">,</span><span class="mi">15</span><span class="p">],[</span><span class="s2">&quot;姿君&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">money</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
     <span class="n">d</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">+=</span><span class="n">money</span>
-<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12819,7 +12829,7 @@ Mars 儲值 15 =&gt; 35<br>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="[&#32244;&#32722;]-&#36938;&#25138;&#35336;&#20998;">[&#32244;&#32722;] &#36938;&#25138;&#35336;&#20998;<a class="anchor-link" href="#[&#32244;&#32722;]-&#36938;&#25138;&#35336;&#20998;">&#182;</a></h3><p>遊戲中計分，第一回合：A 得 10 分、第二回合 B 得 5 分...，最後要加總算分數。</p>
+<h3 id="[&#36914;&#38542;&#32244;&#32722;]-&#36938;&#25138;&#35336;&#20998;">[&#36914;&#38542;&#32244;&#32722;] &#36938;&#25138;&#35336;&#20998;<a class="anchor-link" href="#[&#36914;&#38542;&#32244;&#32722;]-&#36938;&#25138;&#35336;&#20998;">&#182;</a></h3><p>遊戲中計分，第一回合：A 得 10 分、第二回合 B 得 5 分...，最後要加總算分數。</p>
 <div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="mi">23</span><span class="p">],[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 <p>答案是：</p>
@@ -12842,7 +12852,7 @@ A的得分19</code></pre>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="mi">23</span><span class="p">],[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 <span class="k">for</span> <span class="n">_____</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">___</span><span class="p">,</span><span class="n">___</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">___</span><span class="p">,</span><span class="n">___</span><span class="p">)</span>
 </pre></div>
 <p>會得到以下結果</p>
 <div class="highlight"><pre><span></span>A 10
@@ -12883,11 +12893,11 @@ eg.</p>
 <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
 
 <span class="k">for</span> <span class="n">_____</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">___</span><span class="p">,</span><span class="n">___</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">___</span><span class="p">,</span><span class="n">___</span><span class="p">)</span>
     <span class="n">d</span><span class="p">[</span><span class="n">___</span><span class="p">]</span> <span class="o">=</span> <span class="n">______</span>
 
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}的得分{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">的得分</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -12903,7 +12913,7 @@ eg.</p>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">score</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
     <span class="n">d</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">+=</span><span class="n">score</span> <span class="c1"># d[name]=d[name]+score</span>
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}的得分{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">的得分</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -13127,7 +13137,6 @@ C的得分25
 <h1 id="&#35036;&#20805;&#30693;&#35672;-&#23383;&#20856;&#30456;&#38364;&#22909;&#29992;&#21151;&#33021;">&#35036;&#20805;&#30693;&#35672;-&#23383;&#20856;&#30456;&#38364;&#22909;&#29992;&#21151;&#33021;<a class="anchor-link" href="#&#35036;&#20805;&#30693;&#35672;-&#23383;&#20856;&#30456;&#38364;&#22909;&#29992;&#21151;&#33021;">&#182;</a></h1><ul>
 <li>取不存在的 key 值</li>
 <li>有預設值的字典</li>
-<li>有順序性的字典</li>
 </ul>
 
 </div>
@@ -13320,7 +13329,7 @@ C的得分25
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#26377;&#38928;&#35373;&#20540;&#30340;&#23383;&#20856;">&#26377;&#38928;&#35373;&#20540;&#30340;&#23383;&#20856;<a class="anchor-link" href="#&#26377;&#38928;&#35373;&#20540;&#30340;&#23383;&#20856;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="err">物件型別</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">物件型別</span><span class="p">)</span>
 </pre></div>
 <ul>
 <li>物件型別若不指定，預設為 <code>None</code></li>
@@ -13336,7 +13345,7 @@ C的得分25
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;int()的預設值為&quot;</span><span class="p">,</span><span class="nb">int</span><span class="p">())</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> 
@@ -13426,7 +13435,7 @@ C的得分25
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> 
 
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">score</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>    
@@ -13465,7 +13474,7 @@ C的得分25
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;list()的預設值為&quot;</span><span class="p">,</span><span class="nb">list</span><span class="p">())</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> 
@@ -13512,7 +13521,7 @@ C的得分25
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;David&quot;</span><span class="p">,</span><span class="mi">70</span><span class="p">],[</span><span class="s2">&quot;Mars&quot;</span><span class="p">,</span><span class="mi">58</span><span class="p">],[</span><span class="s2">&quot;Kelly&quot;</span><span class="p">,</span><span class="mi">90</span><span class="p">],[</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="mi">40</span><span class="p">],[</span><span class="s2">&quot;Amy&quot;</span><span class="p">,</span><span class="mi">58</span><span class="p">]]</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> 
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">score</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
@@ -13540,91 +13549,6 @@ C的得分25
 58分 的學生有 Mars,Amy
 90分 的學生有 Kelly
 40分 的學生有 Bob
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#26377;&#38918;&#24207;&#24615;&#30340;&#23383;&#20856;">&#26377;&#38918;&#24207;&#24615;&#30340;&#23383;&#20856;<a class="anchor-link" href="#&#26377;&#38918;&#24207;&#24615;&#30340;&#23383;&#20856;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-</pre></div>
-<ul>
-<li>並不是原生的字典型別，但有跟原生字典型別同樣的操作方式</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">d</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
-<span class="n">d</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">d</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;A&#39;: 1, &#39;B&#39;: 2, &#39;C&#39;: 3}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
-<span class="n">d</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
-<span class="n">d</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">d</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>OrderedDict([(&#39;A&#39;, 1), (&#39;B&#39;, 2), (&#39;C&#39;, 3)])
 </pre>
 </div>
 </div>

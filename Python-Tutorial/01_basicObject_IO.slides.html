@@ -11661,8 +11661,13 @@ ul.typeahead-list > li > a {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -11922,7 +11927,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#31532;&#19968;&#25903;Python&#31243;&#24335;">&#31532;&#19968;&#25903;Python&#31243;&#24335;<a class="anchor-link" href="#&#31532;&#19968;&#25903;Python&#31243;&#24335;">&#182;</a></h1><h3 id="-"> <a class="anchor-link" href="#-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello PyLadies&quot;</span><span class="p">)</span>
+<h1 id="&#31532;&#19968;&#25903;Python&#31243;&#24335;">&#31532;&#19968;&#25903;Python&#31243;&#24335;<a class="anchor-link" href="#&#31532;&#19968;&#25903;Python&#31243;&#24335;">&#182;</a></h1><h3 id="-"> <a class="anchor-link" href="#-">&#182;</a></h3><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello PyLadies&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12092,7 +12097,7 @@ HelloHelloHelloHello
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="mi">70</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">70</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12103,7 +12108,7 @@ HelloHelloHelloHello
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="[&#32244;&#32722;]">[&#32244;&#32722;]<a class="anchor-link" href="#[&#32244;&#32722;]">&#182;</a></h3><p>鉛筆 1 支 5 元，一打(12支) 50 元。<br>
+<h3 id="[&#36914;&#38542;&#32244;&#32722;]">[&#36914;&#38542;&#32244;&#32722;]<a class="anchor-link" href="#[&#36914;&#38542;&#32244;&#32722;]">&#182;</a></h3><p>鉛筆 1 支 5 元，一打(12支) 50 元。<br>
 要買 42 支請問最少要花多少錢？</p>
 
 </div>
@@ -12126,7 +12131,7 @@ HelloHelloHelloHello
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">((</span><span class="mi">42</span><span class="o">//</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="mi">50</span><span class="o">+</span><span class="p">(</span><span class="mi">42</span><span class="o">%</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">((</span><span class="mi">42</span><span class="o">//</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="mi">50</span><span class="o">+</span><span class="p">(</span><span class="mi">42</span><span class="o">%</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12137,13 +12142,13 @@ HelloHelloHelloHello
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 加法</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 減法</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 乘法</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 除法</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 除法(取整數，無條件捨去)</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">%</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 取餘數</span>
-<span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 次方</span>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 加法</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 減法</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 乘法</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 除法</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 除法(取整數，無條件捨去)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">%</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># 取餘數</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 次方</span>
 </pre></div>
 <p>現在的舉例是10跟3的各種運算，
 那如果我想換成55跟5呢？</p>
@@ -12362,7 +12367,7 @@ HelloHelloHelloHello
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Python-&#26159;&#19968;&#20491;&#21205;&#24907;&#24615;&#30340;&#35486;&#35328;">Python &#26159;&#19968;&#20491;&#21205;&#24907;&#24615;&#30340;&#35486;&#35328;<a class="anchor-link" href="#Python-&#26159;&#19968;&#20491;&#21205;&#24907;&#24615;&#30340;&#35486;&#35328;">&#182;</a></h2><ul>
-<li>同樣的物件可以隨時更動他的型別</li>
+<li>標籤可以隨時貼到不同型別的物件上</li>
 </ul>
 
 </div>
@@ -12547,7 +12552,7 @@ HelloHelloHelloHello
 <h3 id="[&#32244;&#32722;]">[&#32244;&#32722;]<a class="anchor-link" href="#[&#32244;&#32722;]">&#182;</a></h3><p>請修正以下程式碼，讓字串相加變成是數值相加，也就是結果會是 120</p>
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;70&quot;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;50&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12560,7 +12565,7 @@ HelloHelloHelloHello
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;70&quot;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;50&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12685,7 +12690,7 @@ HelloPyLadies
 eg. 我分別輸入 5 (按下Enter) 10 (按下Enter) 結果會是 15</p>
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入a~&quot;</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入b~&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12698,7 +12703,7 @@ eg. 我分別輸入 5 (按下Enter) 10 (按下Enter) 結果會是 15</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入a~&quot;</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;請輸入b~&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13035,7 +13040,7 @@ Pydies iwAn
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">article</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;女孩&quot;</span><span class="p">,</span><span class="s2">&quot;女生&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">article</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;女孩&quot;</span><span class="p">,</span><span class="s2">&quot;女生&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13224,7 +13229,7 @@ http://www.wantgoo.com/stock/2371?searchType=stocks
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="n">hobby</span> <span class="o">=</span> <span class="n">_____</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;我是PyLadies的___，我喜歡___，很高興認識大家！&quot;</span><span class="n">_______</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;我是PyLadies的___，我喜歡___，很高興認識大家！&quot;</span><span class="n">_______</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13237,7 +13242,7 @@ http://www.wantgoo.com/stock/2371?searchType=stocks
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 <span class="n">hobby</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;我是PyLadies的{}，我喜歡{}，很高興認識大家！&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">hobby</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;我是PyLadies的</span><span class="si">{}</span><span class="s2">，我喜歡</span><span class="si">{}</span><span class="s2">，很高興認識大家！&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">hobby</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13369,7 +13374,7 @@ True
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#20839;&#24314;&#20989;&#25976;-&#22411;&#21029;&#21028;&#23450;">&#20839;&#24314;&#20989;&#25976;-&#22411;&#21029;&#21028;&#23450;<a class="anchor-link" href="#&#20839;&#24314;&#20989;&#25976;-&#22411;&#21029;&#21028;&#23450;">&#182;</a></h2><ul>
-<li><code>isinstance(數值,型別)</code>：產生的結果為bool布林型別</li>
+<li><code>isinstance(物件,型別)</code>：產生的結果為bool布林型別</li>
 </ul>
 
 </div>
@@ -13463,7 +13468,7 @@ True True True True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="[&#32244;&#32722;]">[&#32244;&#32722;]<a class="anchor-link" href="#[&#32244;&#32722;]">&#182;</a></h3><p>輸入一個數字，如果是奇數，印出 True；
+<h3 id="[&#36914;&#38542;&#32244;&#32722;]">[&#36914;&#38542;&#32244;&#32722;]<a class="anchor-link" href="#[&#36914;&#38542;&#32244;&#32722;]">&#182;</a></h3><p>輸入一個數字，如果是奇數，印出 True；
 否則印出 False(也就是偶數的意思)</p>
 <h4 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h4><ul>
 <li><code>input()</code>：輸入，要記得要用個命名物件去接，儲存的型別為字串</li>
@@ -13479,7 +13484,7 @@ True True True True
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">___</span><span class="p">(</span><span class="n">___</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="n">__2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">___</span><span class="p">(</span><span class="n">___</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="n">__2</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13491,7 +13496,7 @@ True True True True
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">%</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13545,7 +13550,7 @@ True True True True
 <span class="n">bus_hour</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="n">bus_mins</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="n">time</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="k">print</span><span class="p">(((</span><span class="n">now_hour</span><span class="o">*</span><span class="mi">60</span><span class="o">+</span><span class="n">now_mins</span><span class="p">)</span><span class="o">+</span><span class="n">time</span><span class="p">)</span><span class="o">&lt;=</span><span class="p">(</span><span class="n">bus_hour</span><span class="o">*</span><span class="mi">60</span><span class="o">+</span><span class="n">bus_mins</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(((</span><span class="n">now_hour</span><span class="o">*</span><span class="mi">60</span><span class="o">+</span><span class="n">now_mins</span><span class="p">)</span><span class="o">+</span><span class="n">time</span><span class="p">)</span><span class="o">&lt;=</span><span class="p">(</span><span class="n">bus_hour</span><span class="o">*</span><span class="mi">60</span><span class="o">+</span><span class="n">bus_mins</span><span class="p">))</span>
 </pre></div>
 
 </div>

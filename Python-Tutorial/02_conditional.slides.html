@@ -11661,8 +11661,13 @@ ul.typeahead-list > li > a {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -12307,8 +12312,8 @@ a&gt;b
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="s2">&quot;2205&quot;</span>
 <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;2200&quot;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;現在很晚了&quot;</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;怎麼還在外面遊蕩&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;現在很晚了&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;怎麼還在外面遊蕩&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12519,14 +12524,14 @@ a&gt;b
 <h4 id="Hint:">Hint:<a class="anchor-link" href="#Hint:">&#182;</a></h4><ul>
 <li>版本1<div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2060</span>
 <span class="k">if</span> <span class="s2">&quot;西元年份可被400整除&quot;</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 <span class="k">elif</span> <span class="s2">&quot;西元年份可被4整除&quot;</span> <span class="ow">or</span><span class="o">/</span><span class="ow">and</span><span class="o">/</span><span class="ow">not</span><span class="err">?</span> <span class="s2">&quot;不能被100整除&quot;</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 </pre></div>
 </li>
 <li>版本2<div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2060</span>
 <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;西元年份可被400整除&quot;</span><span class="p">)</span> <span class="ow">or</span><span class="o">/</span><span class="ow">and</span><span class="o">/</span><span class="ow">not</span><span class="err">?</span> <span class="p">(</span><span class="s2">&quot;西元年份可被4整除&quot;</span> <span class="ow">or</span><span class="o">/</span><span class="ow">and</span><span class="o">/</span><span class="ow">not</span><span class="err">?</span> <span class="s2">&quot;不能被100整除&quot;</span><span class="p">):</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 </pre></div>
 </li>
 </ul>
@@ -12542,14 +12547,14 @@ a&gt;b
 <ul>
 <li>版本1<div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2060</span>
 <span class="k">if</span> <span class="n">year</span><span class="o">%</span><span class="mi">400</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 <span class="k">elif</span> <span class="n">year</span><span class="o">%</span><span class="mi">4</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">year</span><span class="o">%</span><span class="mi">100</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 </pre></div>
 </li>
 <li>版本2<div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="mi">2060</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">year</span><span class="o">%</span><span class="mi">400</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">year</span><span class="o">%</span><span class="mi">4</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">year</span><span class="o">%</span><span class="mi">100</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{}是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">是閏年&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 </pre></div>
 </li>
 </ul>
@@ -12570,7 +12575,7 @@ a&gt;b
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="[&#32244;&#32722;]---&#26820;&#20445;&#25928;&#25033;">[&#32244;&#32722;] - &#26820;&#20445;&#25928;&#25033;<a class="anchor-link" href="#[&#32244;&#32722;]---&#26820;&#20445;&#25928;&#25033;">&#182;</a></h3><p>台灣的選舉法令禁止各陣營及媒體在投票日前的一個星期內公佈民調結果，其中最重要的一個因素是要避免「棄保效應」。<br>
+<h3 id="[&#36914;&#38542;&#32244;&#32722;]---&#26820;&#20445;&#25928;&#25033;">[&#36914;&#38542;&#32244;&#32722;] - &#26820;&#20445;&#25928;&#25033;<a class="anchor-link" href="#[&#36914;&#38542;&#32244;&#32722;]---&#26820;&#20445;&#25928;&#25033;">&#182;</a></h3><p>台灣的選舉法令禁止各陣營及媒體在投票日前的一個星期內公佈民調結果，其中最重要的一個因素是要避免「棄保效應」。<br>
 所謂的「棄保效應」是指選民在得知自己所支持的候選人當選無望時，有可能會把票投給其他比較可能當選的人，以免浪費了自己的一票。<br>
 假設某選舉有三位候選人來競選一個職位，在「棄保效應」發揮到極致的情形下，所有民調第三名的候選人的支持者都會把票投民調第二名的候選人，也就是他們都會「棄三保二」。給你 A, B, C 三個候選人的支持者人數，請判斷誰會當選？(不考慮支持數一樣)</p>
 <p>我們先試試，A,B 候選人的支持數都比 C 候選人低 (<code>a+b&lt;c</code>) 的情況：</p>
@@ -12623,11 +12628,11 @@ a&gt;b
 
 <span class="k">if</span> <span class="n">____</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">____</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12644,11 +12649,11 @@ a&gt;b
 
 <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">&gt;</span><span class="n">c</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
